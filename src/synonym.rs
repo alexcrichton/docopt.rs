@@ -1,5 +1,5 @@
 use std::collections::HashMap;
-use std::collections::hashmap::{Entries, Keys};
+use std::collections::hash_map::{Entries, Keys};
 use std::fmt::Show;
 use std::hash::Hash;
 use std::mem;
@@ -42,7 +42,7 @@ impl<K: Eq + Hash, V> SynonymMap<K, V> {
     pub fn contains_key(&self, k: &K) -> bool {
         self.with_key(k, |k| self.vals.contains_key(k))
     }
-    
+
     pub fn len(&self) -> uint {
         self.vals.len()
     }
