@@ -219,6 +219,7 @@ use std::collections::HashMap;
 use std::fmt;
 use std::from_str::{FromStr, from_str};
 use std::num;
+use std::num::NumCast;
 use serialize::Decodable;
 use parse::Parser;
 use synonym::SynonymMap;

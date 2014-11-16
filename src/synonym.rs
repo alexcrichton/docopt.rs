@@ -18,7 +18,7 @@ impl<K: Eq + Hash, V> SynonymMap<K, V> {
         }
     }
 
-    pub fn insert_synonym(&mut self, from: K, to: K) -> bool {
+    pub fn insert_synonym(&mut self, from: K, to: K) -> Option<K> {
         assert!(self.vals.contains_key(&to));
         self.syns.insert(from, to)
     }
